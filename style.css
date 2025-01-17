@@ -10,6 +10,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
     height: 90px;
     display: flex;
     justify-content: end;
@@ -63,7 +64,7 @@ section {
 
 
 section.games {
-    background-color: white;
+    background-color: rgb(190, 72, 72);
     display: grid;
     grid-template-rows: 20% 1fr;
 }
@@ -150,4 +151,15 @@ section.games img.ativo {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
+}
+
+section {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .2s;
+}
+
+section.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }

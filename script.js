@@ -5,7 +5,7 @@ if (linksInternos.length) {
         function navMenu(event) {
             event.preventDefault();
             const href = event.currentTarget.getAttribute('href');
-            const section = document.querySelector(href)
+            const section = document.querySelector(href);
             const sectionTop = section.offsetTop - 90;
             window.scrollTo({
                 top: sectionTop,
@@ -44,8 +44,8 @@ const imgGames = document.querySelectorAll('.img-games img');
 
 
 if(opGames.length && imgGames.length) {
+    imgGames[0].classList.add('ativo')
     function mostrarImg(index) {
-        console.log('Deus', index);
         imgGames.forEach((img) => {
             img.classList.remove('ativo');
         })
@@ -60,7 +60,21 @@ if(opGames.length && imgGames.length) {
     })
 }
 
+const sections = document.querySelectorAll('section');
+const windowMetade = window.innerHeight * 0.7;
 
+function animaScroll() {
+    sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top - windowMetade;
+        if (sectionTop < 0) {
+            section.classList.add('ativo');
+        } else {
+            section.classList.remove('ativo');
+        }
+    })
+}
+
+window.addEventListener('scroll', animaScroll);
 
 
 mostrarMais()
