@@ -120,33 +120,23 @@ section > h2.mais-info::after {
 }
 
 section > h2.mais-info.ativo::after {
-    content: "⬏";
+    content: " ⬏"
 }
 
-section > p.info {
-    display: none;
-    animation: show;
-}
-
-section > p.info.ativo {
-    display: block;
-}
-
-section.games img {
+section p.info {
     display: none;
 }
 
-section.games img.ativo {
+section p.info.ativo {
     display: block;
-    animation: show .5s forwards;
+    animation: show .2s forwards;
 }
 
 @keyframes show {
     from {
         opacity: 0;
-        transform: translate3d(-30px, 0, 0);
+        transform: translate3d(0, -30px, 0);
     }
-
     to {
         opacity: 1;
         transform: translate3d(0, 0, 0);
