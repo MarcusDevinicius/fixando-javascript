@@ -95,7 +95,6 @@ section.games ul.lista-games li a {
 
 section.games img {
     width: 500px;
-    display: none;
 }
 
 section.games ul.img-games {
@@ -152,4 +151,13 @@ section {
 section.ativo {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+
+section.games img {
+    display: none;
+}
+
+section.games img.ativo {
+    display: block;
 }
